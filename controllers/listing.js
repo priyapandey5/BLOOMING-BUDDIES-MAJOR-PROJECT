@@ -21,7 +21,7 @@ module.exports.index = async (req, res) => {
     })
     .populate("owner");
     if(!listing){
-        req.flash("error","Listing you requested for does not exist ");
+        req.flash("error"," Market Listing you requested for does not exist ");
         res.redirect("/listings");
     }
     console.log(listing);
@@ -44,7 +44,7 @@ module.exports.index = async (req, res) => {
     let { id } = req.params;
     const listing = await Listing.findById(id);
     if(!listing){
-      req.flash("error","Listing you requested for does not exist ");
+      req.flash("error"," Market Listing you requested for does not exist ");
       res.redirect("/listings");
   }
 
