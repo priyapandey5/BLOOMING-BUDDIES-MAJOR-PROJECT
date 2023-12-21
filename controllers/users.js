@@ -31,7 +31,7 @@ module.exports.renderLoginForm = (req,res) => {
 };
 
 module.exports.login = async(req,res) => {
-    req.flash("success","Welcome back to Wonderlust!");
+    req.flash("success","Welcome back to Flower Market!");
     let redirectUrl = res.locals.redirectUrl || "/listings";
     res.redirect(redirectUrl);
 };
